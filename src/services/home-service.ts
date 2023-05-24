@@ -108,16 +108,6 @@ class HomeService {
         name: req.name,
         budget: req.budget,
         cost: req.cost,
-
-        services: {
-          create: [
-            {
-              name: reqService.name,
-              cost: reqService.cost,
-              description: reqService.description,
-            },
-          ],
-        },
       },
     });
 
