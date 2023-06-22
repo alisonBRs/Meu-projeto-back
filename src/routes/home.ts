@@ -13,6 +13,7 @@ export class Home implements RouteType {
     this.router.patch("/:id", homeController.update);
     this.router.delete("/:id", homeController.delete);
 
+    this.router.get("/service/:id/:id", homeController.getService);
     this.router.post("/service/:id", homeController.postService);
     this.router.delete("/service/:id/:id", homeController.deleteService);
     this.router.delete("/service/:id", homeController.deleteAllServices);

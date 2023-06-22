@@ -41,6 +41,13 @@ class HomeController {
     return res.status(200).json({ success: "Serviço deletado com sucesso!" });
   }
 
+  public async getService(req: Request, res: Response) {
+    const id = Number(req.params.id);
+    const response = await homeService.getUserandService(id);
+
+    return res.status(200).json(response);
+  }
+
   public async deleteAllServices(req: Request, res: Response) {
     await homeService.deleteAllServices();
 

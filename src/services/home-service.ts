@@ -92,6 +92,16 @@ class HomeService {
     return deleteService;
   }
 
+  public async getUserandService(id: number) {
+    const getService = await prisma.services.findUnique({
+      where: {
+        id,
+      },
+    });
+
+    return getService;
+  }
+
   public async deleteAllServices() {
     const deleteAllServices = await prisma.services.deleteMany();
 
